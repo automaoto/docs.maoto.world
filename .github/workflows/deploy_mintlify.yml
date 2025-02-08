@@ -9,17 +9,17 @@ on:
     branches:
       - main
       - setup-docs
-    paths:
-      - "docs/**"
   workflow_dispatch:
 
 jobs:
   deploy:
-    name: Deploy Mintlify Docs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Deploy Mintlify Docs
-        run: npx mintlify deploy
+      - name: Install Dependencies
+        run: npm install -g mintlify
+
+      - name: Validate Mintlify Docs
+        run: mintlify broken-links
