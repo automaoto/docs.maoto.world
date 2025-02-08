@@ -1,0 +1,100 @@
+{
+    "name": "MAOTO",
+    "theme": "venus",
+    "logo": {
+      "dark": "logo-dark.png",
+      "light": "logo-light.png"
+    },
+    "favicon": "favicon.svg",
+    "colors": {
+      "primary": "#2D89EF",
+      "light": "#72B3F8",
+      "dark": "#1C5CA8",
+      "anchors": {
+        "from": "#737373",
+        "to": "#2D89EF"
+      }
+    },
+    "seo": {
+      "indexHiddenPages": false
+    },
+    "modeToggle": {
+      "default": "dark",
+      "isHidden": false
+    },
+    "feedback": {
+      "suggestEdit": true,
+      "raiseIssue": true,
+      "thumbsRating": true
+    },
+    "topbarCtaButton": {
+      "type": "github",
+      "url": "https://github.com/automaoto"
+    },
+    "primaryTab": {
+      "name": "Get Started"
+    },
+    "tabs": [
+      {
+        "name": "Examples",
+        "url": "examples"
+      }
+    ],
+    "anchors": [
+      {
+        "name": "API Reference",
+        "icon": "code",
+        "url": "/api/"
+      },
+      {
+        "name": "Community",
+        "icon": "discord",
+        "url": "https://discord.gg/hNuqjnGjNw"
+      },
+      {
+        "name": "Changelog",
+        "icon": "timeline",
+        "url": "https://pypi.org/project/maoto-agent/#history"
+      }
+    ],
+    "navigation": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "installation",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Core Concepts",
+        "pages": [
+          "concepts/agents",
+          "concepts/tasks"
+        ]
+      },
+      {
+        "group": "How-To Guides",
+        "pages": [
+          "how-to/integrate-external-services", 
+          "how-to/configure-ai-agents"
+        ]
+      },
+      {
+        "group": "Examples",
+        "pages": [
+          "examples/example"
+        ]
+      }
+    ],
+    "search": {
+      "prompt": "Search MAOTO Docs"
+    },
+    "footerSocials": {
+      "website": "https://maoto.world",
+      "github": "https://github.com/automaoto",
+      "linkedin": "https://www.linkedin.com/company/automaoto",
+      "youtube": "https://www.youtube.com/@automaoto"
+    }
+  }
+  

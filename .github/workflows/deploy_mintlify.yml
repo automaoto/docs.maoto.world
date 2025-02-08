@@ -1,0 +1,20 @@
+name: Deploy Mintlify Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy Mintlify Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy Mintlify Docs
+        run: npx mintlify deploy

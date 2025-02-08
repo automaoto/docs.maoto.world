@@ -1,0 +1,40 @@
+---
+title: Installation
+description: Get started with MAOTO - Install, configure, and build your first AI system
+icon: wrench
+---
+
+# Installing MAOTO
+
+<Note>
+  **Python Version Requirements**
+  
+  MAOTO requires `Python >=3.10`. Here's how to check your version:
+  ```bash
+  python3 --version
+  ```
+  
+  If you need to update Python, visit [python.org/downloads](https://python.org/downloads)
+</Note>
+
+<Steps>
+    <Step title="Install `maoto-agent`">
+        Install MAOTO Agent package:
+        ```shell Terminal
+        pip install maoto-agent
+        ```
+    </Step>
+
+    <Step title="Verify Installation">
+        Check your installed versions:
+        ```shell Terminal
+        pip freeze | grep maoto-agent
+        ```
+
+        You should see something like:
+        ```markdown Output
+        maoto-agent==X.X.X
+        ```
+        <Check>Installation successful! You're ready to create your first MAOTO Agent.</Check>
+    </Step>
+</Steps>
