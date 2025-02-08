@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+      - setup-docs
+  pull_request:
+    branches:
+      - main
+      - setup-docs
     paths:
       - "docs/**"
   workflow_dispatch:
