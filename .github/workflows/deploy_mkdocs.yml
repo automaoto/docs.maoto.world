@@ -3,11 +3,11 @@ name: Deploy MkDocs
 on:
   push:
     branches:
-      - setup-docs  # This ensures the workflow runs when pushing to setup-docs
+      - setup-docs  # Deploys on every push to setup-docs
   workflow_dispatch:
 
 permissions:
-  contents: write  # Ensure GitHub Actions can commit changes
+  contents: write
 
 jobs:
   deploy:
@@ -18,27 +18,23 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material mkdocstrings mkdocstrings-python
-          pip install maoto-agent  # Install your package
+          sudo apt-get update && sudo apt-get install pngquant
+          pip install mkdocs-material mkdocs-material-extensions pillow cairosvg
+          pip install maoto-agent  # Your package
 
-      - name: Build documentation
-        run: mkdocs build --config-file mkdocs/mkdocs.yml --strict
-
-      - name: Move built site to root
-        run: |
-          rm -rf docs  # Remove the existing docs folder (if it exists)
-          mv mkdocs/site docs  # Move built site to /docs for GitHub Pages
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs
-          git commit -m "Update documentation" || echo "No changes to commit"
-          git push origin setup-docs
+      - name: Deploy MkDocs to GitHub Pages
+        run: mkdocs gh-deploy --force
