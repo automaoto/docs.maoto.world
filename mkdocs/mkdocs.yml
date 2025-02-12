@@ -8,7 +8,7 @@ nav:
   - API Reference:
       - Maoto Agent: reference/maoto_agent.md
   - Installation: installation.md
-  - Examples: examples/
+  - Examples: examples.md
 
 plugins:
   - search
