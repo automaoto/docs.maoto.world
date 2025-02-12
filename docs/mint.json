@@ -3,7 +3,8 @@
     "theme": "venus",
     "logo": {
       "dark": "logo-dark.png",
-      "light": "logo-light.png"
+      "light": "logo-light.png",
+      "href": "https://www.maoto.world/"
     },
     "favicon": "favicon.svg",
     "colors": {

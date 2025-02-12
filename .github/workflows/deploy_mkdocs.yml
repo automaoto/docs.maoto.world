@@ -1,34 +1,39 @@
-name: Deploy MkDocs API Docs
+name: Deploy MkDocs
 
 on:
-  workflow_call:
   push:
     branches:
-      - main
-    paths-ignore:
-      - "docs/**"
+      - setup-docs  # Change to your primary branch if different
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.10"
 
-      - name: Install MkDocs
-        run: pip install mkdocs-material mkdocstrings[python]
-
-      - name: Install Latest `maoto-agent`
-        run: pip install --upgrade maoto-agent
-
-      - name: Build & Deploy API Docs
+      - name: Install dependencies
         run: |
-          cd mkdocs
-          mkdocs build
-          mkdocs gh-deploy --force
+          pip install mkdocs mkdocs-material
+          pip install maoto-agent  # Install your package
+
+      - name: Build documentation
+        run: mkdocs build --strict
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site  # MkDocs output directory
+          cname: docs.maoto.world  # Your custom domain
