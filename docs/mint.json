@@ -92,9 +92,12 @@
     },
     "footerSocials": {
       "website": "https://maoto.world",
-      "github": "https://github.com/automaoto",
       "linkedin": "https://www.linkedin.com/company/automaoto",
-      "youtube": "https://www.youtube.com/@automaoto"
+      "youtube": "https://www.youtube.com/@automaoto",
+      "github": "https://github.com/automaoto",
+      "instagram": "https://www.instagram.com/automaoto/",
+      "twitter": "https://x.com/maoto",
+      "facebook": "https://www.facebook.com/automaoto"
     }
   }
   
