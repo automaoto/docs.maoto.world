@@ -3,11 +3,11 @@ name: Deploy MkDocs
 on:
   push:
     branches:
-      - setup-docs  # Change to your primary branch if different
+      - setup-docs  # This ensures the workflow runs when pushing to setup-docs
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # Ensure GitHub Actions can commit changes
 
 jobs:
   deploy:
@@ -30,9 +30,15 @@ jobs:
       - name: Build documentation
         run: mkdocs build --config-file mkdocs/mkdocs.yml --strict
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./mkdocs/site  # MkDocs output directory
-          cname: docs.maoto.world  # Your custom domain
+      - name: Move built site to root
+        run: |
+          rm -rf docs  # Remove the existing docs folder (if it exists)
+          mv mkdocs/site docs  # Move built site to /docs for GitHub Pages
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Update documentation" || echo "No changes to commit"
+          git push origin setup-docs
