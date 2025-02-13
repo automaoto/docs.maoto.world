@@ -4,7 +4,7 @@ site_url: https://package.maoto.world/
 nav:
   - Home: index.md
   - Installation: installation.md
-  - API Reference:
+  - Package Versions:
       - Stable: stable/api.md
       - Beta: beta/api.md
 
