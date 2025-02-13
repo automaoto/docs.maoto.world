@@ -31,23 +31,27 @@ jobs:
           pip install mkdocs-macros-plugin
           pip install maoto-agent  # Install the package
 
-      - name: Build documentation (Stable)
+      - name: Fetch stable version and build docs
         run: |
+          echo "Building stable documentation..."
+          pip install --no-cache-dir maoto-agent
           mkdocs build --config-file mkdocs/mkdocs.yml
           mv mkdocs/site mkdocs/stable_site
 
-      - name: Build documentation (Beta)
+      - name: Fetch beta version and build docs
         run: |
+          echo "Building beta documentation..."
           pip install --pre --no-cache-dir maoto-agent
           mkdocs build --config-file mkdocs/mkdocs.yml
           mv mkdocs/site mkdocs/beta_site
 
-      - name: Merge versions and set index.html
+      - name: Merge versions and ensure correct root index
         run: |
           mkdir -p mkdocs/site
           mv mkdocs/stable_site mkdocs/site/stable
           mv mkdocs/beta_site mkdocs/site/beta
-          cp mkdocs/site/stable/index.html mkdocs/site/index.html  # Ensure a valid root page
+          cp mkdocs/site/stable/index.html mkdocs/site/index.html  # Ensure correct root index
+          touch mkdocs/site/.nojekyll  # Fix missing styles issue
 
       - name: Deploy to GitHub Pages (`deploy-mkdocs` branch)
         uses: peaceiris/actions-gh-pages@v3

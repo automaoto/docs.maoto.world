@@ -1,24 +1,30 @@
 site_name: Maoto Agent Docs
 site_url: https://package.maoto.world/
 
-nav:
-  - Home: index.md
-  - Package Versions:
-      - Stable: stable/api.md
-      - Beta: beta/api.md
-
 theme:
   name: material
   palette:
-    scheme: slate
-    primary: black
-    toggle:
-      icon: material/weather-sunny
-      name: Switch to light mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: default
+      primary: dark-blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+
   features:
+    - content.code.annotate
+    - content.code.copy
     - navigation.instant
     - navigation.tracking
-    - content.code.annotate
+    - search.highlight
+    - search.share
+    - search.suggest
 
 plugins:
   - search
@@ -38,3 +44,28 @@ extra:
   version:
     stable: "latest"
     beta: "dev"
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/automaoto
+    - icon: fontawesome/brands/github
+      link: https://github.com/automaoto
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/automaoto
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@automaoto
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/automaoto
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/automaoto/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/automaoto
+
+not_in_nav: |
+
+
+# Page tree
+nav:
+  - Home: index.md
+  - Package Versions:
+      - Stable: stable/api.md
+      - Beta: beta/api.md
