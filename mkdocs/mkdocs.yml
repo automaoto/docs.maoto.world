@@ -4,8 +4,8 @@ site_url: https://package.maoto.world/
 nav:
   - Home: index.md
   - Package Versions:
-      - Stable: stable/
-      - Beta: beta/
+      - Stable: stable/api.md
+      - Beta: beta/api.md
 
 theme:
   name: material
