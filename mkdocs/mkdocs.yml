@@ -23,8 +23,8 @@ plugins:
           options:
             show_source: true
             docstring_style: "numpy"
-            docstring_options:
-              ignore_init_summary: true
+            members: true  # Include only public methods
+            filters: ["!^_"]  # Hides private methods (starting with "_")
   - macros
 
 extra:
