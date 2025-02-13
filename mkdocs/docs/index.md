@@ -1,7 +1,6 @@
-# Welcome to the `maoto-agent` Package
+# Welcome to `maoto-agent` Package
 
-# Welcome to Maoto-Agent Package
 
-📘 [Go to API Documentation →](./stable/api/)
+📘 [**Go to Package Documentation →**](./stable/api.md)
 
-👉 **Looking for the full User Guide?** [Click here](https://docs.maoto.world)
+👉 **Checkout the full User Guide [here](https://docs.maoto.world)**
