@@ -1,17 +1,9 @@
-# Welcome to MkDocs
+# Welcome to `maoto-agent` Package
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+For full documentation visit [docs.maoto.world](https://docs.maoto.world).
 
-## Commands
+## Sections
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* [Installation Guide](installation.md) - How to install and use `maoto-agent`.
+* [Stable Version](stable/index.md) - View the latest stable version here.
+* [Beta Version](beta/index.md) - Checkout what's coming next here.
