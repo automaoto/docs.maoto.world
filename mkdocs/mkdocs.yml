@@ -1,0 +1,33 @@
+site_name: Maoto Agent Docs
+site_url: https://package.maoto.world/
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Package Versions:
+      - Stable: stable/api.md
+      - Beta: beta/api.md
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            docstring_style: "numpy"
+            members: true  # Include only public methods
+            filters: ["!^_"]  # Hides private methods (starting with "_")
+  - macros
+
+extra:
+  version:
+    stable: "latest"
+    beta: "dev"
