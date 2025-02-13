@@ -5,11 +5,8 @@ nav:
   - Home: index.md
   - Installation: installation.md
   - API Reference:
-      - Stable: stable/index.md
-      - Beta: beta/index.md
-      - Python API:
-          - Stable: stable/api.md
-          - Beta: beta/api.md
+      - Stable: stable/api.md
+      - Beta: beta/api.md
 
 theme:
   name: material
@@ -25,6 +22,9 @@ plugins:
         python:
           options:
             show_source: false
+            docstring_style: "numpy"
+            docstring_options:
+              ignore_init_summary: true
   - macros
 
 extra:
