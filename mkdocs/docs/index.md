@@ -1,9 +1,7 @@
-# Welcome to `maoto-agent` Package
+# Welcome to the `maoto-agent` Package
 
-For full documentation visit [docs.maoto.world](https://docs.maoto.world).
+# Welcome to Maoto-Agent Package
 
-## Sections
+📘 [Go to API Documentation →](./stable/api/)
 
-* [Installation Guide](installation.md) - How to install and use `maoto-agent`.
-* [Stable Version](stable/api.md) - View the latest stable version here.
-* [Beta Version](beta/api.md) - Checkout what's coming next here.
+👉 **Looking for the full User Guide?** [Click here](https://docs.maoto.world)

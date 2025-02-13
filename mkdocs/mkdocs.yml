@@ -3,13 +3,18 @@ site_url: https://package.maoto.world/
 
 nav:
   - Home: index.md
-  - Installation: installation.md
   - Package Versions:
-      - Stable: stable/api.md
-      - Beta: beta/api.md
+      - Stable: stable/
+      - Beta: beta/
 
 theme:
   name: material
+  palette:
+    scheme: slate
+    primary: black
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tracking
@@ -25,6 +30,8 @@ plugins:
             docstring_style: "numpy"
             members: true  # Include only public methods
             filters: ["!^_"]  # Hides private methods (starting with "_")
+            inherited_members: true  # Include inherited methods
+            merge_init_into_class: true  # Show __init__ details in class doc
   - macros
 
 extra:

@@ -29,20 +29,26 @@ jobs:
           pip install mkdocs-material mkdocs-material-extensions pillow cairosvg
           pip install mkdocstrings mkdocstrings-python
           pip install mkdocs-macros-plugin  # Fix: Install missing plugin
-          pip install maoto-agent
 
-
-      - name: Fetch latest versions from PyPI
+      - name: Fetch stable version from PyPI and generate docs
         run: |
-          echo "Fetching stable and beta versions..."
-          STABLE_VERSION=$(pip index versions maoto-agent | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
-          BETA_VERSION=$(pip index versions maoto-agent | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+b[0-9]+' | head -1)
-          echo "Stable: $STABLE_VERSION, Beta: $BETA_VERSION"
-          echo "VERSION_STABLE=$STABLE_VERSION" >> $GITHUB_ENV
-          echo "VERSION_BETA=$BETA_VERSION" >> $GITHUB_ENV
+          echo "Fetching latest stable version..."
+          pip install --no-cache-dir maoto-agent
+          mkdocs build --config-file mkdocs/mkdocs.yml
+          mv mkdocs/site mkdocs/stable_site  # Save stable version output
 
-      - name: Generate documentation
-        run: mkdocs build --config-file mkdocs/mkdocs.yml
+      - name: Fetch beta version from PyPI and generate docs
+        run: |
+          echo "Fetching latest beta version..."
+          pip install --pre --no-cache-dir maoto-agent
+          mkdocs build --config-file mkdocs/mkdocs.yml
+          mv mkdocs/site mkdocs/beta_site  # Save beta version output
+
+      - name: Merge stable and beta docs
+        run: |
+          mkdir -p mkdocs/site
+          mv mkdocs/stable_site mkdocs/site/stable
+          mv mkdocs/beta_site mkdocs/site/beta
 
       - name: Deploy to GitHub Pages (`deploy-mkdocs` branch)
         uses: peaceiris/actions-gh-pages@v3
