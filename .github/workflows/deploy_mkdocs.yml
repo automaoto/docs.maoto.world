@@ -28,7 +28,9 @@ jobs:
         run: |
           pip install mkdocs-material mkdocs-material-extensions pillow cairosvg
           pip install mkdocstrings mkdocstrings-python
-          pip install maoto-agent  # Install latest package
+          pip install mkdocs-macros-plugin  # Fix: Install missing plugin
+          pip install maoto-agent
+
 
       - name: Fetch latest versions from PyPI
         run: |
