@@ -30,22 +30,30 @@ jobs:
           pip install mkdocstrings mkdocstrings-python
           pip install mkdocs-macros-plugin
 
-      - name: Fetch stable version from PyPI
+      - name: Fetch stable version from PyPI and generate docs
         run: |
           echo "Fetching latest stable version..."
           pip install --no-cache-dir maoto-agent
-          mkdocs build --config-file mkdocs/mkdocs.yml --site-dir mkdocs/site/stable
+          mkdocs build --config-file mkdocs/mkdocs.yml
+          mv mkdocs/site site_stable
 
-      - name: Fetch beta version from PyPI
+      - name: Fetch beta version from PyPI and generate docs
         run: |
           echo "Fetching latest beta version..."
           pip install --pre --no-cache-dir maoto-agent
-          mkdocs build --config-file mkdocs/mkdocs.yml --site-dir mkdocs/site/beta
+          mkdocs build --config-file mkdocs/mkdocs.yml
+          mv mkdocs/site site_beta
+
+      - name: Merge stable and beta docs
+        run: |
+          mkdir -p site
+          mv site_stable site/stable
+          mv site_beta site/beta
 
       - name: Deploy to GitHub Pages (`deploy-mkdocs` branch)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: deploy-mkdocs
-          publish_dir: mkdocs/site  # Deploy both stable and beta under this directory
+          publish_dir: mkdocs/site  # This must contain index.html
           cname: package.maoto.world
