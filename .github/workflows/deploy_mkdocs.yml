@@ -29,29 +29,29 @@ jobs:
           pip install mkdocs-material mkdocs-material-extensions pillow cairosvg
           pip install mkdocstrings mkdocstrings-python
           pip install mkdocs-macros-plugin
-          pip install maoto-agent  # Install the package
 
-      - name: Fetch stable version and build docs
+      - name: Build Stable Version
         run: |
-          echo "Building stable documentation..."
-          pip install --no-cache-dir maoto-agent
+          echo "Building stable version..."
+          pip install --no-cache-dir maoto-agent  # Install latest stable version
           mkdocs build --config-file mkdocs/mkdocs.yml
           mv mkdocs/site mkdocs/stable_site
 
-      - name: Fetch beta version and build docs
+      - name: Build Beta Version
         run: |
-          echo "Building beta documentation..."
-          pip install --pre --no-cache-dir maoto-agent
+          echo "Building beta version..."
+          pip install --pre --no-cache-dir maoto-agent  # Install latest beta version
           mkdocs build --config-file mkdocs/mkdocs.yml
           mv mkdocs/site mkdocs/beta_site
 
-      - name: Merge versions and ensure correct root index
+      - name: Merge Versions and Set Root Index
         run: |
+          echo "Merging stable and beta documentation..."
           mkdir -p mkdocs/site
           mv mkdocs/stable_site mkdocs/site/stable
           mv mkdocs/beta_site mkdocs/site/beta
-          cp mkdocs/site/stable/index.html mkdocs/site/index.html  # Ensure correct root index
-          touch mkdocs/site/.nojekyll  # Fix missing styles issue
+          cp mkdocs/site/stable/index.html mkdocs/site/index.html  # Set root index
+          touch mkdocs/site/.nojekyll  # Fix missing CSS issues on GitHub Pages
 
       - name: Deploy to GitHub Pages (`deploy-mkdocs` branch)
         uses: peaceiris/actions-gh-pages@v3
