@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://package.maoto.world/stable/api/">
       
       
-        <link rel="prev" href="../../beta/">
+        <link rel="prev" href="../../installation/">
       
       
         <link rel="next" href="../../beta/api/">
@@ -64,6 +64,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#latest-stable-version" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -271,88 +276,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Stable
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../beta/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Beta
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Python API
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            Python API
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
     
   
   
@@ -362,6 +285,20 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Stable
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -373,6 +310,169 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maoto_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      maoto_agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maoto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maoto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.EventDrivenQueueProcessor" class="md-nav__link">
+    <span class="md-ellipsis">
+      EventDrivenQueueProcessor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EventDrivenQueueProcessor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.EventDrivenQueueProcessor.cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      cleanup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.ServerMode" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServerMode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ServerMode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.ServerMode.shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      shutdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.ServerMode.startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      startup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto._handle_subscription_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      _handle_subscription_event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto._run_subscription_with_reconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      _run_subscription_with_reconnect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto._shutdown_db_conn_pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      _shutdown_db_conn_pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto._startup_db_conn_pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      _startup_db_conn_pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      execute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.fetch_all" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetch_all
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.transaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      transaction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -407,14 +507,6 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
   </ul>
 </nav>
@@ -433,6 +525,160 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maoto_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      maoto_agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maoto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maoto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.EventDrivenQueueProcessor" class="md-nav__link">
+    <span class="md-ellipsis">
+      EventDrivenQueueProcessor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EventDrivenQueueProcessor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.EventDrivenQueueProcessor.cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      cleanup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.ServerMode" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServerMode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ServerMode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.ServerMode.shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      shutdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.ServerMode.startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      startup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto._handle_subscription_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      _handle_subscription_event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto._run_subscription_with_reconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      _run_subscription_with_reconnect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto._shutdown_db_conn_pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      _shutdown_db_conn_pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto._startup_db_conn_pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      _startup_db_conn_pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      execute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.fetch_all" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetch_all
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maoto_agent.Maoto.transaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      transaction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -448,9 +694,371 @@
 
 
 
-  <h1>Stable</h1>
+<h1 id="latest-stable-version">Latest Stable Version</h1>
+<p>This section contains the latest stable release API documentation.</p>
 
 
+<div class="doc doc-object doc-module">
+
+
+
+<a id="maoto_agent"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="maoto_agent.Maoto" class="doc doc-heading">
+            <code>Maoto</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="maoto_agent.Maoto.EventDrivenQueueProcessor" class="doc doc-heading">
+            <code>EventDrivenQueueProcessor</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="maoto_agent.Maoto.EventDrivenQueueProcessor.cleanup" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">cleanup</span><span class="p">()</span></code>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Cleanup function to ensure graceful termination.</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="maoto_agent.Maoto.ServerMode" class="doc doc-heading">
+            <code>ServerMode</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="maoto_agent.Maoto.ServerMode.shutdown" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">shutdown</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Actions to perform on application shutdown.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="maoto_agent.Maoto.ServerMode.startup" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">startup</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Actions to perform on application startup.</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="maoto_agent.Maoto._handle_subscription_event" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">_handle_subscription_event</span><span class="p">(</span><span class="n">task_queue</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Handle the result of the subscription. Identify the
+event type via __typename, instantiate the corresponding
+event object, and put it on the queue.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="maoto_agent.Maoto._run_subscription_with_reconnect" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">_run_subscription_with_reconnect</span><span class="p">(</span><span class="n">task_queue</span><span class="p">,</span> <span class="n">subscription</span><span class="p">,</span> <span class="n">stop_event</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>This method continuously attempts to subscribe. If the subscription breaks,
+it retries (unless stop_event is set), using randomized exponential backoff.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="maoto_agent.Maoto._shutdown_db_conn_pool" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">_shutdown_db_conn_pool</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Disconnect from the database.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="maoto_agent.Maoto._startup_db_conn_pool" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">_startup_db_conn_pool</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Establish a database connection with automatic reconnection.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="maoto_agent.Maoto.execute" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Execute an INSERT, UPDATE, or DELETE statement.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="maoto_agent.Maoto.fetch_all" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">fetch_all</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Fetch multiple records from the database.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="maoto_agent.Maoto.transaction" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">transaction</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return an async context manager so that
+<code>async with agent.transaction(): ...</code> works.</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 
 
