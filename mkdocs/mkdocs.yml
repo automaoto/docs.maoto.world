@@ -1,0 +1,26 @@
+site_name: MAOTO Agent Package
+site_url: https://package.maoto.world/
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - API Reference:
+      - Stable: stable/index.md
+      - Beta: beta/index.md
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+
+plugins:
+  - search
+  - mkdocstrings
+  - macros
+
+extra:
+  version:
+    stable: "latest"
+    beta: "dev"
