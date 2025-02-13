@@ -48,10 +48,11 @@ jobs:
         run: |
           echo "Merging stable and beta documentation..."
           mkdir -p mkdocs/site
-          mv mkdocs/stable_site mkdocs/site/stable
+          # Copy all files from the stable build to the root
+          cp -r mkdocs/stable_site/* mkdocs/site/
+          # Place the beta version into its own subdirectory
           mv mkdocs/beta_site mkdocs/site/beta
-          cp mkdocs/site/stable/index.html mkdocs/site/index.html  # Set root index
-          touch mkdocs/site/.nojekyll  # Fix missing CSS issues on GitHub Pages
+          touch mkdocs/site/.nojekyll  # Prevent GitHub Pages from ignoring files
 
       - name: Deploy to GitHub Pages (`deploy-mkdocs` branch)
         uses: peaceiris/actions-gh-pages@v3
