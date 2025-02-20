@@ -1,10 +1,8 @@
 ---
 title: Installation
-description: Get started with MAOTO - Install, configure, and build your first AI system
-icon: wrench
+description: Get started with MAOTO - Install, configure, and build your first AI system with MAOTO.
+icon: download
 ---
-
-# Installing MAOTO
 
 <Note>
   **Python Version Requirements**
@@ -17,12 +15,64 @@ icon: wrench
   If you need to update Python, visit [python.org/downloads](https://python.org/downloads)
 </Note>
 
+# Setting Up Your Environment
+
+Before installing `maoto-agent`, it's recommended to set up a virtual environment. This helps isolate your project dependencies and avoid conflicts.
+
+<Steps>
+    <Step title="Create a Virtual Environment">
+        Choose your preferred method to create a virtual environment:
+
+        **Using venv (Python's built-in tool):**
+        ```shell Terminal
+        python3 -m venv .venv
+        ```
+
+        **Using conda:**
+        ```shell Terminal
+        conda create -n maoto-env python=3.12
+        ```
+    </Step>
+
+    <Step title="Activate the Virtual Environment">
+        Activate your virtual environment based on your platform:
+
+        **On macOS/Linux (venv):**
+        ```shell Terminal
+        source .venv/bin/activate
+        ```
+
+        **On Windows (venv):**
+        ```shell Terminal
+        .venv\Scripts\activate
+        ```
+
+        **Using conda (all platforms):**
+        ```shell Terminal
+        conda activate maoto-env
+        ```
+    </Step>
+</Steps>
+
+# Installing MAOTO
+
 <Steps>
     <Step title="Install `maoto-agent`">
         Install MAOTO Agent package:
         ```shell Terminal
         pip install maoto-agent
         ```
+    </Step>
+
+    <Step title="Upgrade `maoto-agent` (Existing Installations Only)">
+        If you have an older version of `maoto-agent` installed, you can upgrade it:
+        ```shell Terminal
+        pip install --upgrade maoto-agent
+        ```
+
+        <Note>
+            Skip this step if you're doing a fresh installation.
+        </Note>
     </Step>
 
     <Step title="Verify Installation">
@@ -38,3 +88,22 @@ icon: wrench
         <Check>Installation successful! You're ready to create your first MAOTO Agent.</Check>
     </Step>
 </Steps>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Build Your First AI System"
+    icon="code"
+    href="quickstart"
+  >
+    Follow our quickstart guide to create your first MAOTO agent and get hands-on experience.
+  </Card>
+  <Card
+    title="Explore MAOTO Concepts"
+    icon="comet"
+    href="concepts/roles"
+  >
+    Learn about MAOTO's key roles and concepts to better understand how AI systems interact within the ecosystem.
+  </Card>
+</CardGroup>
