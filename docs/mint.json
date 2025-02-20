@@ -69,15 +69,30 @@
       {
         "group": "Core Concepts",
         "pages": [
-          "concepts/agents",
-          "concepts/tasks"
+          {
+            "group": "Key Roles",
+            "icon": "bullseye-arrow",
+            "pages": ["concepts/roles/resolver", "concepts/roles/provider", "concepts/roles/marketplace"]
+          },
+          {
+            "group": "Resolver Handlers",
+            "icon": "wrench",
+            "pages": ["concepts/resolver/bidding", "concepts/resolver/actions"]
+          }
         ]
       },
       {
         "group": "How-To Guides",
         "pages": [
-          "how-to/integrate-external-services", 
-          "how-to/configure-ai-agents"
+          {
+            "group": "Building AI Systems",
+            "icon": "robot",
+            "pages": ["how-to/build-ai-systems/mobile-app-agents", "how-to/build-ai-systems/web-agents"]
+          },
+          "how-to/configure-the-ai-system",
+          "how-to/integrate-external-services",
+          "how-to/ensure-data-privacy",
+          "how-to/monetizing-your-ai-systems"
         ]
       },
       {
