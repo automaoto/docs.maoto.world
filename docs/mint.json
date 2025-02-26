@@ -87,10 +87,8 @@
           {
             "group": "Building AI Systems",
             "icon": "robot",
-            "pages": ["how-to/build-ai-systems/mobile-app-agents", "how-to/build-ai-systems/web-agents"]
+            "pages": ["how-to/build-ai-systems/getting-started", "how-to/build-ai-systems/mobile-app-agents", "how-to/build-ai-systems/web-agents"]
           },
-          "how-to/configure-the-ai-system",
-          "how-to/integrate-external-services",
           "how-to/ensure-data-privacy",
           "how-to/monetizing-your-ai-systems"
         ]
