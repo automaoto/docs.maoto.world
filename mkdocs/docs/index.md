@@ -1,6 +1,5 @@
-# Welcome to `maoto-agent` Package
+# Latest Stable Version
 
+This section contains the latest stable release API documentation.
 
-📘 [**Go to Package Documentation →**](./stable/api.md)
-
-👉 **Checkout the full User Guide [here](https://docs.maoto.world)**
+::: maoto_agent

@@ -1,20 +1,21 @@
-site_name: Maoto Agent Docs
+site_name: Maoto Package Docs
 site_url: https://package.maoto.world/
 
 theme:
   name: material
+  favicon: https://maoto.world/favicon.ico
   palette:
     # Palette toggle for dark mode
     - scheme: slate
       primary: black
       toggle:
-        icon: material/brightness-7
+        icon: material/brightness-4
         name: Switch to light mode
     # Palette toggle for light mode
     - scheme: default
       primary: dark-blue
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-7
         name: Switch to dark mode
 
   features:
@@ -65,7 +66,5 @@ not_in_nav: |
 
 # Page tree
 nav:
-  - Home: index.md
-  - Package Versions:
-      - Stable: stable/api.md
-      - Beta: beta/api.md
+  - Stable: index.md
+  - Beta: beta.md
