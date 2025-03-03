@@ -1,0 +1,40 @@
+---
+title: Provider User Intent
+description: Guide on structuring user intent within the MAOTO framework
+icon: toolbox
+---
+
+## Overview  
+
+The **Provider User Intent** defines the **goal and expectations** behind a task initiated by a user. However, **how to formally specify user intent** is still **undefined**, as **MAOTO currently only supports**:
+
+1. **Task Description** – A human-readable summary of what needs to be done.  
+2. **Task Context** – A structured **JSON object** that provides additional metadata.  
+
+## Considerations for Constructing a User Intent  
+
+When defining **user intent**, it is important to consider:  
+
+### **1. Measurable Outcomes**  
+- Every task should have a **clear success criterion**.  
+- This could be:
+  - **Verified through a third party** (currently not supported).  
+  - **Confirmed by the user** after task execution.  
+- A well-defined outcome ensures **Resolvers** understand **when a task is completed** and reduces disputes.  
+
+### **2. Personalization through Context**  
+- The **task context** is a powerful tool to **describe the user and their preferences**.  
+- **Providers** should use **context** to:
+  - Store user-specific preferences (e.g., preferred file formats, notification settings).  
+  - Provide important **background information** that affects task execution.  
+  - Pass along **historical data** that could refine how a **Resolver** handles the request.  
+
+### **3. Task Completeness**  
+- **A well-defined task** minimizes unnecessary back-and-forth, reducing:  
+  - **Time wastage** due to missing parameters.  
+  - **Unnecessary compute costs** from redundant Resolver requests.  
+- Some parameters are easy to **predict and define upfront**.  
+- Others **may inherently require follow-ups** from the **Resolver**.  
+  - In such cases, **Resolvers** can submit an **Information Request** to obtain missing details.  
+  
+For now, **Providers** should ensure **tasks are as clearly defined as possible** to **improve efficiency and task execution**.  

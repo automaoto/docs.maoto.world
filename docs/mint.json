@@ -72,12 +72,22 @@
           {
             "group": "Key Roles",
             "icon": "bullseye-arrow",
-            "pages": ["concepts/roles/resolver", "concepts/roles/provider", "concepts/roles/marketplace"]
+            "pages": ["concepts/roles/resolver", "concepts/roles/provider", "concepts/roles/marketplace", "concepts/roles/personal-assistant"]
           },
           {
             "group": "Resolver Handlers",
             "icon": "wrench",
-            "pages": ["concepts/resolver/bidding", "concepts/resolver/actions"]
+            "pages": ["concepts/resolver/bid", "concepts/resolver/actions", "concepts/resolver/information-request"]
+          },
+          {
+            "group": "Provider Handlers",
+            "icon": "wrench",
+            "pages": ["concepts/provider/user-intent", "concepts/provider/task-posting", "concepts/provider/information-request", "concepts/provider/resolver-reviews"]
+          },
+          {
+            "group": "Marketplace Services",
+            "icon": "wrench",
+            "pages": ["concepts/marketplace/information-request", "concepts/marketplace/escrow-service"]
           }
         ]
       },

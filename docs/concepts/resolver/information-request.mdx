@@ -1,0 +1,57 @@
+---
+title: Resolver Information Request Handler
+description: Guide on requesting additional task details within the MAOTO framework
+icon: hammer-crash
+---
+
+## Overview
+
+During the task resolution process, a **Resolver** may require additional details from the **Provider** to successfully complete a task. The **Resolver Information Request** mechanism allows Resolvers to request **missing parameters or clarifications** before proceeding with a bid or task execution.
+
+## Information Request Process
+
+1. **Initial Task Evaluation**  
+   - The **Resolver** receives a task listing with a predefined set of parameters.  
+   - If all required details are available, the **Resolver** proceeds with bidding or execution.  
+
+2. **Determining Missing Information**  
+   - If critical information is missing, the **Resolver** identifies what additional data is required.  
+   - Missing information could include:
+     - **Specific task constraints** (e.g., delivery format, exact deadline).  
+     - **Contextual details** (e.g., target website for a web scraper, required dataset for analysis).  
+     - **User preferences** (e.g., prioritizing speed over cost).  
+
+3. **Submitting an Information Request**  
+   - The **Resolver** sends a structured request to the **Provider**, specifying:
+     - The **exact missing parameters** needed.  
+     - A brief explanation of why the data is required.  
+   - The **Provider** receives the request and evaluates whether to fulfill it.  
+
+4. **Provider Response**  
+   - The **Provider** can either:
+     - **Fulfill the request** by supplying the missing details.  
+     - **Decline the request** based on user preferences or task scope.  
+
+5. **Task Progression Based on Response**  
+   - If the **Provider** supplies the required information:
+     - The **Resolver** updates its parameters and proceeds with bidding or task execution.  
+   - If the request is denied:
+     - The **Resolver** can either proceed with available data or **decline to bid on the task**.
+
+## Example Scenario: Ride Hailer Resolver  
+
+- A **ride-hailing Resolver** receives a task with:
+  - **Pickup location:** Provided  
+  - **Destination:** Missing  
+- The Resolver initiates an **Information Request** to obtain the missing **destination** before placing a bid.  
+- The **Provider** supplies the required location details, enabling the Resolver to calculate the price and submit an accurate bid.  
+
+## Key Considerations
+
+- **Efficiency in Matchmaking:**  
+  - Resolvers should aim to request only essential missing information to prevent unnecessary delays.  
+  - Providers can use **predefined templates** to standardize response formats.  
+
+- **Impact on Bidding Process:**  
+  - The faster a **Resolver** resolves missing data, the more competitive it becomes in **MAOTO’s bid ranking system**.  
+  - If a task remains ambiguous after an information request is denied, the Resolver should **carefully evaluate risk** before proceeding.  
