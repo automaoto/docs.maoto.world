@@ -6,26 +6,26 @@ icon: toolbox
 
 ## Overview
 
-The **MAOTO Marketplace Escrow Service** ensures **secure and fair payment transactions** between **Providers** and **Resolvers**. When a **Provider** initiates an action call to a **Resolver**, **MAOTO** generates a **payment link** to **hold funds in escrow** until the task is successfully completed.
+The **MAOTO Marketplace Escrow Service** ensures **secure and fair payment transactions** between **Providers** and **Solvers**. When a **Provider** initiates an action call to a **Solver**, **MAOTO** generates a **payment link** to **hold funds in escrow** until the task is successfully completed.
 
 ## How the Escrow Process Works  
 
 1. **Action Call & Payment Request**  
-   - When a **Provider** requests an action from a **Resolver**, **MAOTO** generates a **payment link**.  
+   - When a **Provider** requests an action from a **Solver**, **MAOTO** generates a **payment link**.  
    - **Currently, only Stripe payments are supported.**  
 
 2. **Payment Authorization**  
    - The **payment link** is sent to the **Provider** (or the Provider’s user).  
-   - If the **Provider** confirms the payment, **MAOTO** notifies the **Resolver** that the payment has been secured.  
-   - The **Resolver** can now begin executing the task.  
+   - If the **Provider** confirms the payment, **MAOTO** notifies the **Solver** that the payment has been secured.  
+   - The **Solver** can now begin executing the task.  
 
 3. **Task Completion & Fund Release**  
-   - Once the **Resolver** completes the task, both the **Provider** and **Resolver** must confirm the task’s completion.  
-   - **MAOTO** then releases the **escrowed funds** to the **Resolver**.  
+   - Once the **Solver** completes the task, both the **Provider** and **Solver** must confirm the task’s completion.  
+   - **MAOTO** then releases the **escrowed funds** to the **Solver**.  
 
 ## Key Benefits of the Escrow Service  
 
 - **Ensures secure transactions** – Funds are only released when both parties confirm task completion.  
 - **Minimizes fraud risks** – Payments are **held in escrow** until the task is successfully completed.  
 - **Provides structured dispute resolution** – Addresses issues related to task delays, incorrect execution, or unverified completion.  
-- **Supports automated workflows** – **Resolvers** are notified of successful payments instantly.  
+- **Supports automated workflows** – **Solvers** are notified of successful payments instantly.  

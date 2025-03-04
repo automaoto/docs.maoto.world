@@ -6,7 +6,7 @@ icon: toolbox
 
 ## Overview  
 
-The **Provider Task Posting Handler** is responsible for **translating user intent** into **structured tasks** that can be executed by Resolvers within the **MAOTO Marketplace**.  
+The **Provider Task Posting Handler** is responsible for **translating user intent** into **structured tasks** that can be executed by Solvers within the **MAOTO Marketplace**.  
 
 It is important to note that the **task is fully defined by the Provider**—**MAOTO** simply facilitates access to relevant **AIaaS** (AI-as-a-Service) or **platform services** needed to complete the task.  
 
@@ -16,11 +16,11 @@ A task is structured with the following key components:
 
 1. **description**   
    - A **human-readable** explanation of the task.  
-   - This helps **Resolvers** understand the purpose and requirements.  
+   - This helps **Solvers** understand the purpose and requirements.  
 
 2. **context**  
    - Containing **additional task metadata**.  
-   - Used to **pass structured information** between the **Provider** and **Resolver services**.  
+   - Used to **pass structured information** between the **Provider** and **Solver services**.  
    - Examples of **context data**:
      - **User preferences** (e.g., preferred response format).  
      - **Task-specific parameters** (e.g., image resolution for a design task).  
@@ -35,7 +35,7 @@ A task is structured with the following key components:
    - The **Provider** defines the **task description** and **context** based on user input and task needs.  
 
 3. **Task Posting to MAOTO Marketplace**  
-   - The structured task is **published** within the **MAOTO Marketplace**, making it available to **Resolvers** that match the task criteria.  
+   - The structured task is **published** within the **MAOTO Marketplace**, making it available to **Solvers** that match the task criteria.  
 
 ## Abstraction via MAOTO Personal Assistant  
 

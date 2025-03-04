@@ -15,7 +15,7 @@ In this Quickstart, you'll create a simple MAOTO agent that can bid on a task ("
         cd maoto-agent-template
         ```
 
-        With this you should now see two example scripts: `01_resolver_server.py` and `02_provider.py`.
+        With this you should now see two example scripts: `01_solver_server.py` and `02_provider.py`.
 
         Install dependencies:
         <Note>
@@ -29,10 +29,10 @@ In this Quickstart, you'll create a simple MAOTO agent that can bid on a task ("
     <Step title="Configure Your API Keys">
         Set up your environment variables:
         ```shell Terminal
-        touch .secrets_resolver .env_resolver
+        touch .secrets_solver .env_solver
         ```
 
-        Open `.secrets_resolver` and `.env_resolver` to add API keys or credentials for the agent.
+        Open `.secrets_solver` and `.env_solver` to add API keys or credentials for the agent.
     </Step>
 </Steps>
 
@@ -43,14 +43,14 @@ In this Quickstart, you'll create a simple MAOTO agent that can bid on a task ("
         In the code below, the `Actioncall` handler is where the agent executes the task (here it simply returns a success message for booking a taxi)
         and the `BidRequest` handler is where the agent decides how much to bid for the task.
 
-        ```python 01_resolver_server.py
+        ```python 01_solver_server.py
         from maoto_agent import *
         from dotenv import load_dotenv
         import asyncio
         import json
 
-        load_dotenv('.secrets_resolver')
-        load_dotenv('.env_resolver')
+        load_dotenv('.secrets_solver')
+        load_dotenv('.env_solver')
 
         agent = Maoto(connection_mode="no_nat")
 
@@ -81,7 +81,7 @@ In this Quickstart, you'll create a simple MAOTO agent that can bid on a task ("
         We then define a new action called `taxi_ride_hailing` with parameters and description, and register it with the agent.
 
 
-        ```python 01_resolver_server.py
+        ```python 01_solver_server.py
         created_actions = agent.create_actions([
             NewAction(
                 name="taxi_ride_hailing",
@@ -142,14 +142,14 @@ In this Quickstart, you'll create a simple MAOTO agent that can bid on a task ("
         ```shell Terminal
         ngrok http --scheme=http --host-header="localhost:8082" 8082
         ```
-        Add this ngrok URL to your `.env_resolver` file:
+        Add this ngrok URL to your `.env_solver` file:
         ```shell Terminal
         MAOTO_AGENT_URL=<your_ngrok_url>/graphql
         ```
 
         Then run the gunicorn command:
         ```shell Terminal
-        gunicorn -w 2 -k uvicorn.workers.UvicornWorker 01_resolver_server:app --bind 0.0.0.0:8082
+        gunicorn -w 2 -k uvicorn.workers.UvicornWorker 01_solver_server:app --bind 0.0.0.0:8082
         ```
 
         Your agent is now live and ready to handle requests!

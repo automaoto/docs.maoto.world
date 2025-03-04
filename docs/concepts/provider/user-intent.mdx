@@ -20,21 +20,21 @@ When defining **user intent**, it is important to consider:
 - This could be:
   - **Verified through a third party** (currently not supported).  
   - **Confirmed by the user** after task execution.  
-- A well-defined outcome ensures **Resolvers** understand **when a task is completed** and reduces disputes.  
+- A well-defined outcome ensures **Solvers** understand **when a task is completed** and reduces disputes.  
 
 ### **2. Personalization through Context**  
 - The **task context** is a powerful tool to **describe the user and their preferences**.  
 - **Providers** should use **context** to:
   - Store user-specific preferences (e.g., preferred file formats, notification settings).  
   - Provide important **background information** that affects task execution.  
-  - Pass along **historical data** that could refine how a **Resolver** handles the request.  
+  - Pass along **historical data** that could refine how a **Solver** handles the request.  
 
 ### **3. Task Completeness**  
 - **A well-defined task** minimizes unnecessary back-and-forth, reducing:  
   - **Time wastage** due to missing parameters.  
-  - **Unnecessary compute costs** from redundant Resolver requests.  
+  - **Unnecessary compute costs** from redundant Solver requests.  
 - Some parameters are easy to **predict and define upfront**.  
-- Others **may inherently require follow-ups** from the **Resolver**.  
-  - In such cases, **Resolvers** can submit an **Information Request** to obtain missing details.  
+- Others **may inherently require follow-ups** from the **Solver**.  
+  - In such cases, **Solvers** can submit an **Information Request** to obtain missing details.  
   
 For now, **Providers** should ensure **tasks are as clearly defined as possible** to **improve efficiency and task execution**.  
