@@ -2,4 +2,4 @@
 
 This section contains the latest stable release API documentation.
 
-::: maoto_agent
+::: maoto_agent.Maoto

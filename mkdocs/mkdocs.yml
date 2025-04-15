@@ -36,7 +36,7 @@ plugins:
             show_source: true
             docstring_style: "numpy"
             members: true  # Include only public methods
-            filters: ["!^_"]  # Hides private methods (starting with "_")
+            filters: ["!^_.*"]  # Hides private methods (starting with "_")
             inherited_members: true  # Include inherited methods
             merge_init_into_class: true  # Show __init__ details in class doc
   - macros
@@ -68,3 +68,4 @@ not_in_nav: |
 nav:
   - Stable: index.md
   - Beta: beta.md
+  - MCP: mcp.md
